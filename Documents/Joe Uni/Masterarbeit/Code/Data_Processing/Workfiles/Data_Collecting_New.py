@@ -8,9 +8,12 @@ from zoneinfo import ZoneInfo   # Python 3.9+
 
 # --- Config ---
 URL = "https://production.gtfsrt.vbb.de/data"
-OUT_FILE_BASE = "vbb_realtime_delays_buses"
-LOG_FILE = "collector_status.log"
+OUT_FILE_BASE = "/home/joeback/gtfs_data/vbb_realtime_delays_buses"
+LOG_FILE = "/home/joeback/gtfs_logs/collector_status.log"
 INTERVAL_SEC = 1800  # 30 minutes
+
+print(f"Data will be written to: {OUT_FILE_BASE}", flush=True)
+print(f"Log will be written to: {LOG_FILE}", flush=True)
 
 BERLIN = ZoneInfo("Europe/Berlin")
 
